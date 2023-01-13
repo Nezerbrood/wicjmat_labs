@@ -1,14 +1,14 @@
 
 import 'dart:math';
 
-int matrixSize =  4;
 
 List<double> diagonalA = List<double>.from([0.0, 1.0, 1.0,2.0]);
 List<double> diagonalB = List<double>.from([3.0, 3.0, 3.0,5.0]);
 List<double> diagonalC = List<double>.from([1.0, 1.0,2.0,0.0]);
 
 List<double> tridiagonalMatrixAlgorithm(List<double> diagonalA,
-    List<double> diagonalB, List<double> diagonalC, vectorD) {
+    List<double> diagonalB, List<double> diagonalC, List<double> vectorD) {
+  int matrixSize =  vectorD.length;
   List<double> xVector = List<double>.filled(matrixSize, 0);
   for (var i = 1; i < matrixSize; i++) {
     double w = diagonalA[i]/diagonalB[i-1];
